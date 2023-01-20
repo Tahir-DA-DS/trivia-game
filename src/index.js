@@ -18,3 +18,12 @@ io.on('connection', () => { // listen for new connections to Socket.IO
 server.listen(port, () => {
   console.log(`Server is up on port ${port}.`);
 });
+
+const formatMessage = require("./utils/formatMessage.js");
+
+const {
+  addPlayer,
+  getAllPlayers,
+  getPlayer,
+  removePlayer,
+} = require("./utils/players.js");
